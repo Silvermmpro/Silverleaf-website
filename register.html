@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}טופס רישום{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>טופס רישום ראשוני</h2>
+    <form method="POST" action="/register">
+        <label>שם מלא:</label>
+        <input type="text" name="full_name" required>
+
+        <label>טלפון:</label>
+        <input type="tel" name="phone" required>
+
+        <label>מאיפה:</label>
+        <input type="text" name="origin">
+
+        <label>ציוד:</label>
+        <input type="text" name="equipment">
+
+        <label>איך שמעת עלינו:</label>
+        <input type="text" name="how_found">
+
+        <label>זמינות:</label>
+        <input type="text" name="availability">
+
+        <label>יש רכב:</label>
+        <select name="has_car">
+            <option value="כן">כן</option>
+            <option value="לא">לא</option>
+        </select>
+
+        <label>מייל:</label>
+        <input type="email" name="email">
+
+        <label>תאריך לידה:</label>
+        <input type="date" name="birthdate">
+
+        <label>מגדר:</label>
+        <select name="gender">
+            <option value="זכר">זכר</option>
+            <option value="נקבה">נקבה</option>
+            <option value="אחר">אחר</option>
+        </select>
+
+        <button type="submit">שלח טופס</button>
+    </form>
+</div>
+{% endblock %}
